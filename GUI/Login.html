@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!--icons link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            background-color: #fff;
+        }
+
+        .login-form {
+            background-color: rgba(217, 217, 217, 0.2);
+            border-radius: 8px;
+            box-shadow: 0 0 0 0.2rem #7a2d2d, 0 2px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 150px;
+            position: relative;
+            height: 526px;
+        }
+
+        .login-form h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .login-form form .form-label {
+            font-weight: bold;
+        }
+
+        .login-form form .btn {
+            background-color: #7a2d2d;
+            height:47px;
+            width:355px;
+            border-radius:24px;
+            color: white;
+        }
+
+        .login-form form .btn:hover {
+            background-color: #fff;
+            color: #7a2d2d;
+            border-color:#732E2E;
+        }
+
+        .login-form a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .login-form a:hover {
+            text-decoration: none;
+        }
+
+        .login-form form .form-control {
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid #ced4da;
+        }
+
+        .login-form form .form-control:focus {
+            border-color: #7a2d2d;
+            box-shadow: none;
+        }
+
+        .img-fluid {
+            width: 800px;
+            height: 730px;
+            margin-left:0px;
+        }
+
+        .icon-container {
+            position: fixed;
+            top: 0px;
+            right: 50px;
+            background-color: #7a2d2d;
+            padding: 10px;
+            border-radius: 8px;
+            z-index: 1000;
+            width: 98px;
+            height: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon {
+            font-size: 35px;
+            color: #fff;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+        .icon:hover {
+            transform: scale(1.2); 
+        }
+
+        .text-muted {
+            color: black !important;
+            text-decoration: none !important;
+        }
+        
+        .text-muted:hover {
+            color: black !important;
+            text-decoration: none !important;
+        }
+        .form-floating {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-control {
+            flex-grow: 1;
+        }
+        .fa-envelope {
+            margin-left: 0.5rem;
+        }
+        .lock-icon,.mail-icon {
+            font-size: 24px; 
+            margin-right: 10px; 
+        }
+        @media (max-width: 768px) {
+        .icon-container {
+                width: 90px; 
+                height: 100px; 
+            }
+        }
+        .form-control{
+            background-color:rgba(217, 217, 217, 0.1);
+        }
+        .form-floating input:focus {
+            background-color: rgba(217, 217, 217, 0.1);
+        }
+        .login-form form .form-floating label {
+            color: #732E2E;
+            font-size:20px;
+        }
+        .form-floating input:focus ~ label,
+        .form-floating input:not(:placeholder-shown) ~ label {
+            color: black;
+        }
+        .login-form form .btn a {
+            color: white;
+            text-decoration: none;
+            font-weight:bold;
+        }
+
+        .login-form form .btn:hover a {
+            color: #732E2E;
+            font-weight:bold;
+        }
+        .login-form form .text-center a {
+            color: #732E2E;
+        }
+        .form-check-input[type=checkbox] {
+            border-radius: .25em;
+            border-color:black;
+        }
+
+        </style>
+</head>
+<body>
+    <div class="icon-container">
+        <i class="bi bi-house icon"></i>
+    </div>
+    <div class="container-fluid vh-100 d-flex justify-content-center align-items-center">
+        <div class="row w-100">
+            <div class="col-md-6 d-none d-md-block">
+                <img src="image/login.jpg" alt="Vet and pet" class="img-fluid">
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="login-form p-4">
+                    <h2 class="text-center"><strong>LogIn</strong></h2><br>
+                    <form>
+                        <div class="form-floating mb-3 d-flex align-items-center">
+                            <input type="email" class="form-control flex-grow-1" id="email" placeholder="Enter your email">
+                            <label for="email">Email</label>
+                            <i class="fa fa-envelope ms-2 mail-icon" aria-hidden="true"></i>
+                        </div>                        
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                            <label for="password">Password</label><i class="fa fa-lock lock-icon" aria-hidden="true"></i>
+                        </div>
+                        <div class="form-check mb-3 d-flex justify-content-between">
+                            <div>
+                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Remember me</label>
+                            </div>
+                            <a href="#" class="text-muted">Forget Password?</a>
+                        </div><br>
+                        <a href="Desktop5.html" class="btn w-100">LOGIN</a>
+
+                        <div class="text-center mt-3">
+                            <span>Don't have an account? <a href="Desktop3.html"><strong>Register</strong></a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
